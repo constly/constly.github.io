@@ -3,7 +3,7 @@
   <channel>
       <title>多摩雄的游戏人生 on 多摩雄的游戏人生 </title>
       <generator uri="https://gohugo.io">Hugo</generator>
-    <link>http://constly.github.io/index.xml</link>
+    <link>https://constly.github.io/index.xml</link>
     <language>en-us</language>
     <author>constly</author>
     
@@ -11,10 +11,10 @@
     
     <item>
       <title>first</title>
-      <link>http://constly.github.io/post/first/</link>
+      <link>https://constly.github.io/post/first/</link>
       <pubDate>Wed, 08 Feb 2017 09:30:21 CST</pubDate>
       <author>constly</author>
-      <guid>http://constly.github.io/post/first/</guid>
+      <guid>https://constly.github.io/post/first/</guid>
       <description>&lt;p&gt;#this is first page.
 * 111111111
 * 11111111&lt;/p&gt;
