@@ -98,7 +98,18 @@
 &lt;/blockquote&gt;
 
 &lt;blockquote&gt;
-&lt;h4 id=&#34;2月16日&#34;&gt;2月16日:&lt;/h4&gt;
+&lt;h4 id=&#34;2月16日-正常上下班-明天又是周五了&#34;&gt;2月16日: 正常上下班，明天又是周五了&lt;/h4&gt;
+
+&lt;ol&gt;
+&lt;li&gt;模型摆放界面之Icon拖拽功能;&lt;/li&gt;
+&lt;li&gt;代码整理，将地图加载/删除/改名/保存部分移到MapLoading中;&lt;/li&gt;
+&lt;li&gt;制定UIManager优化计划：去除controller，去除异步加载模式，增加子窗口支持，做好本地化支持，依据窗口打开顺序动态设置层级;&lt;/li&gt;
+&lt;li&gt;距上星期团建打个喷嚏把肋骨闪到已经快一周了，本以为会慢慢好转，结果发现越来越痛了，于是今天下班回来买了块药膏贴在身上，看看效果吧，郁闷;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+&lt;h4 id=&#34;2月17日&#34;&gt;2月17日:&lt;/h4&gt;
 
 &lt;ol&gt;
 &lt;li&gt;123&lt;/li&gt;
