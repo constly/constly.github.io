@@ -130,10 +130,31 @@
 &lt;/blockquote&gt;
 
 &lt;blockquote&gt;
-&lt;h4 id=&#34;2月19日&#34;&gt;2月19日:&lt;/h4&gt;
+&lt;h4 id=&#34;2月19日-转眼周末就没了&#34;&gt;2月19日: 转眼周末就没了&lt;/h4&gt;
 
 &lt;ol&gt;
-&lt;li&gt;12&lt;/li&gt;
+&lt;li&gt;按前几天的构想，重写了UIManager，还剩本地化尚未处理;&lt;/li&gt;
+&lt;li&gt;在公园奢侈的晒了一下午的太阳;&lt;/li&gt;
+&lt;li&gt;地图上的房子增加添加/删除/移动/删除命令，支持前进/回退功能;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+&lt;h4 id=&#34;2月20日&#34;&gt;2月20日:&lt;/h4&gt;
+
+&lt;ol&gt;
+&lt;li&gt;123&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+&lt;h4 id=&#34;待定&#34;&gt;待定&lt;/h4&gt;
+
+&lt;ol&gt;
+&lt;li&gt;文字本地化&lt;/li&gt;
+&lt;li&gt;小地图显示房间&lt;/li&gt;
+&lt;li&gt;房间摆放的冲突提示&lt;/li&gt;
+&lt;li&gt;寻路&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/blockquote&gt;
 </description>
