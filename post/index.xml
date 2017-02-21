@@ -134,8 +134,9 @@
 
 &lt;ol&gt;
 &lt;li&gt;按前几天的构想，重写了UIManager，还剩本地化尚未处理;&lt;/li&gt;
-&lt;li&gt;在公园奢侈的晒了一下午的太阳;&lt;/li&gt;
+&lt;li&gt;在公园奢侈的晒了一下午的太阳，看蒋勋老师写的《美，看不见的竞争力》;&lt;/li&gt;
 &lt;li&gt;地图上的房子增加添加/删除/移动/删除命令，支持前进/回退功能;&lt;/li&gt;
+&lt;li&gt;老妈又打电话催找对象;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/blockquote&gt;
 
@@ -143,7 +144,17 @@
 &lt;h4 id=&#34;2月20日&#34;&gt;2月20日:&lt;/h4&gt;
 
 &lt;ol&gt;
-&lt;li&gt;123&lt;/li&gt;
+&lt;li&gt;房子摆放之碰撞检测和网格提示功能开发;&lt;/li&gt;
+&lt;li&gt;格子摆放之提示箭头功能开发;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+&lt;h4 id=&#34;2月21日&#34;&gt;2月21日:&lt;/h4&gt;
+
+&lt;ol&gt;
+&lt;li&gt;真TM见鬼了，前段时间发现存档压缩后解压会报错，还以为是GZip出了什么问题，于是今天换了个7Zip，结果还是不行。。。蛋疼，肾疼，各种疼！
+    折腾了一个晚上，未果，准备明天请教下其他同事;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/blockquote&gt;
 
@@ -153,8 +164,8 @@
 &lt;ol&gt;
 &lt;li&gt;文字本地化&lt;/li&gt;
 &lt;li&gt;小地图显示房间&lt;/li&gt;
-&lt;li&gt;房间摆放的冲突提示&lt;/li&gt;
 &lt;li&gt;寻路&lt;/li&gt;
+&lt;li&gt;可以往房间墙上、地上摆放物件&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/blockquote&gt;
 </description>
