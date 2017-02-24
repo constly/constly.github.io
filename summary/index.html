@@ -4,8 +4,8 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>经验教训 - 多摩雄的游戏人生</title>
-	<meta name="author" content="map[name:多摩雄 email:]">
+	<title>开发总结 - 多摩雄的游戏人生</title>
+	<meta name="author" content="map[email: name:多摩雄]">
 
 	
 	
@@ -60,7 +60,7 @@
 	<li><a href="/welcome">欢迎光临</a></li>
     <li><a href="/">全部文章</a></li>
     <li><a href="/post/">目录列表</a></li>
-    <li><a href="/summary">经验教训</a></li>
+    <li><a href="/summary">开发总结</a></li>
     <li><a href="/about">关于作者</a></li>
 </ul>
 
@@ -103,65 +103,171 @@
 				<div id="content" class="inner">
 					<div itemscope itemtype="http://schema.org/Blog">
 					<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-    <h1 class="title" itemprop="name">经验教训</h1>
+    <h1 class="title" itemprop="name">开发总结</h1>
 	<div class="entry-content" itemprop="articleBody">
 
-<blockquote>
-<h4 id="字体颜色规范">字体颜色规范:</h4>
+<h2 id="颜色规范">颜色规范</h2>
 
-<ol>
-<li>普通 白色</li>
-<li>①绿色 color=#46e14b</li>
-<li>②红色 color=#fc0800</li>
-<li>③黄色 color=#ffd900</li>
-<li>④橙色 color=#f39800</li>
-<li>⑤蓝色 color=#3ac3c8</li>
-<li>⑥紫色 color=#934bcb</li>
-<li>⑦粉色 color=#f168e2</li>
-</ol>
+<blockquote>
+<h4 id="1-字体颜色规范">1.  字体颜色规范:</h4>
+
+<pre><code>*   普通 白色
+*   ①绿色 color=#46e14b
+*   ②红色 color=#fc0800 
+*   ③黄色 color=#ffd900 
+*   ④橙色 color=#f39800 
+*   ⑤蓝色 color=#3ac3c8 
+*   ⑥紫色 color=#934bcb
+*   ⑦粉色 color=#f168e2
+</code></pre>
+
+<h4 id="2-界面颜色规范">2.  界面颜色规范:</h4>
+
+<pre><code>*   底层背景 
+*   标题背景
+*   文本背景
+</code></pre>
+
+<h5 id="2-1-button样式1">2.1 button样式1</h5>
+
+<pre><code>*   文本颜色
+*   normal状态
+*   highlight状态
+*   pressed状态
+*   disabled状态
+</code></pre>
+
+<h5 id="2-2-button样式2">2.2 button样式2</h5>
+
+<pre><code>*   文本颜色
+*   normal状态
+*   highlight状态
+*   pressed状态
+*   disabled状态
+</code></pre>
+
+<h4 id="3-字体大小规范">3.  字体大小规范:</h4>
+
+<pre><code>*   普通叙述 
+*   选项
+*   小标题
+*   大标题
+</code></pre>
 </blockquote>
 
-<blockquote>
-<h4 id="界面颜色规范">界面颜色规范:</h4>
-
-<ol>
-<li>底层背景</li>
-<li>标题背景</li>
-<li>文本背景</li>
-</ol>
+<h2 id="编码规范">编码规范</h2>
 
 <blockquote>
-<h4 id="button样式1">button样式1</h4>
+<h4 id="1-lua与c-共有">1. lua与C#共有</h4>
 
-<ol>
-<li>文本颜色</li>
-<li>normal状态</li>
-<li>highlight状态</li>
-<li>pressed状态</li>
-<li>disabled状态</li>
-</ol>
+<pre><code>*   事件以On开头，如OnGameStart
+*   返回bool的函数，以Is、Try、Can开头，如CanOpenUI()
+*   常量命名：全大写，以下划线分割，如MAP_SIZE
+*   文件命名：大驼峰法，如GameManager
+*   枚举命名，大驼峰+Options，如ItemTypeOptions，枚举值以大驼峰命名
+</code></pre>
 
-<h4 id="button样式2">button样式2</h4>
+<h4 id="2-lua编码规范">2. lua编码规范</h4>
 
-<ol>
-<li>文本颜色</li>
-<li>normal状态</li>
-<li>highlight状态</li>
-<li>pressed状态</li>
-<li>disabled状态</li>
-</ol>
+<pre><code>*   类中变量命名： 小驼峰法，如className
+*   函数参数命名： 小驼峰法，如playerName
+*   局部变量命名： 小驼峰法，如mapEngine
+*   全局变量命名： 大驼峰法，如PoolManager 
+*   类中函数命名： 大驼峰法，如GetName
+*   类名: 大驼峰法，如MapModule
+*   局部函数命名：p+大驼峰法，如pClose()
+*   全局函数命名: 大驼峰法，如LoadTexture
+*   如果类型为table，命名需以tb开头，如tbItems
+*   回调命名：p+大驼峰+Callback，如pAddItemCallback
+</code></pre>
+
+<h4 id="3-c-编码规范">3. C#编码规范</h4>
+
+<pre><code>*   类名：大驼峰法
+*   private变量命名：下划线+小驼峰法，如_className
+*   protected变量命名：下划线+小驼峰法，如_modelType
+*   public变量命名: 不允许出现，需要用属性封装，如public float Price {get, set;}
+*   函数参数命名: 小驼峰法
+*   函数名命名：大驼峰法
+*   文件名需与类名保持一致
+*   类型成员排序：私有字段、受保护字段、属性、事件、构造函数、初始化函数、其他函数、销毁函数
+*   数组、字典命名：小驼峰+类型，如itemList，itemDictionary
+*   事件回调命名，小驼峰+Action，如mapClickAction
+</code></pre>
 </blockquote>
-</blockquote>
+
+<h2 id="界面设计规范">界面设计规范</h2>
 
 <blockquote>
-<h4 id="字体大小规范">字体大小规范:</h4>
+<h4 id="动画">动画</h4>
 
-<ol>
-<li>普通叙述</li>
-<li>选项</li>
-<li>小标题</li>
-<li>大标题</li>
-</ol>
+<pre><code>*   界面打开速度：1000px/s
+*   界面关闭速度：1000px/s
+</code></pre>
+
+<h4 id="边框">边框</h4>
+
+<pre><code>*   
+</code></pre>
+</blockquote>
+
+<h2 id="功能开发流程规范">功能开发流程规范</h2>
+
+<blockquote>
+<h4 id="第一步-功能思考">第一步. 功能思考</h4>
+
+<pre><code>*   为什么要做这个功能？
+*   这个功能在整个游戏中处于什么样的位置？
+*   这能给游戏带来什么变化？
+*   与其他功能有何关联？
+*   开发优先级多高？
+*   开发代价多大？
+*   是否考虑过后续扩展？
+*   设计是否简洁明了，或者说是否太复杂？
+</code></pre>
+
+<h4 id="第二步-ui原型制作">第二步. UI原型制作</h4>
+
+<pre><code>*   是不是想好再动手？
+*   界面易用性高吗？
+*   是否使用了黄金分割？
+*   界面配色是否符合规范？
+*   字体大小是否符合规范？
+*   是否考虑界面动画？
+*   控件显示、宽高是否考虑多语言情况？
+*   代码是否执行编码规范？
+*   是否符合设计期望？
+</code></pre>
+
+<h4 id="第三步-场景逻辑实现">第三步. 场景逻辑实现</h4>
+
+<pre><code>*   UI原型是否制作完成？
+*   逻辑文件是否拆分、组织妥当？
+*   代码是否执行编码规范？
+*   代码设计上是否考虑功能的扩展性？
+*   有没有考虑性能问题？
+*   有没有想过可能会有更简单的实现方式？
+</code></pre>
+
+<h4 id="第四步-评估完成情况">第四步. 评估完成情况</h4>
+
+<pre><code>*   界面表现是否符合设计期望？
+*   功能逻辑是否符合设计期望？
+*   是否留有瑕疵，如是否有bug尚未修复？
+*   回头反思设计，是否有未考虑周到的地方？
+*   回头反思设计，是否有更好的表达方式？
+</code></pre>
+
+<h4 id="后续补充">后续补充</h4>
+
+<pre><code>*   
+</code></pre>
+</blockquote>
+
+<h2 id="测试流程规范">测试流程规范</h2>
+
+<blockquote>
+<h4 id="待定">待定</h4>
 </blockquote>
 </div></article>
 					
