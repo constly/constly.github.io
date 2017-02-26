@@ -5,7 +5,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>开发总结 - 多摩雄的游戏人生</title>
-	<meta name="author" content="map[email: name:多摩雄]">
+	<meta name="author" content="map[name:多摩雄 email:]">
 
 	
 	
@@ -57,7 +57,6 @@
 </p>
 <nav id="main-nav">
 <ul class="main">
-	<li><a href="/welcome">欢迎光临</a></li>
     <li><a href="/">全部文章</a></li>
     <li><a href="/post/">目录列表</a></li>
     <li><a href="/summary">开发总结</a></li>
@@ -106,9 +105,10 @@
     <h1 class="title" itemprop="name">开发总结</h1>
 	<div class="entry-content" itemprop="articleBody">
 
-<h2 id="颜色规范">颜色规范</h2>
+<p><br></br></p>
 
-<blockquote>
+<h2 id="center-颜色规范-center"><center>颜色规范</center></h2>
+
 <h4 id="1-字体颜色规范">1.  字体颜色规范:</h4>
 
 <pre><code>*   普通 白色
@@ -123,8 +123,8 @@
 
 <h4 id="2-界面颜色规范">2.  界面颜色规范:</h4>
 
-<pre><code>*   底层背景 
-*   标题背景
+<pre><code>*   底层背景    68,68,68,255
+*   标题背景        34,34,34,255
 *   文本背景
 </code></pre>
 
@@ -133,7 +133,7 @@
 <pre><code>*   文本颜色
 *   normal状态
 *   highlight状态
-*   pressed状态
+*   pressed状态：  102,153,204 
 *   disabled状态
 </code></pre>
 
@@ -148,16 +148,16 @@
 
 <h4 id="3-字体大小规范">3.  字体大小规范:</h4>
 
-<pre><code>*   普通叙述 
-*   选项
-*   小标题
+<pre><code>*   普通叙述    18
+*   选项          20
+*   小标题     22
 *   大标题
 </code></pre>
-</blockquote>
 
-<h2 id="编码规范">编码规范</h2>
+<p><br></br></p>
 
-<blockquote>
+<h2 id="center-编码规范-center"><center>编码规范</center></h2>
+
 <h4 id="1-lua与c-共有">1. lua与C#共有</h4>
 
 <pre><code>*   事件以On开头，如OnGameStart
@@ -190,15 +190,15 @@
 *   函数参数命名: 小驼峰法
 *   函数名命名：大驼峰法
 *   文件名需与类名保持一致
-*   类型成员排序：私有字段、受保护字段、属性、事件、构造函数、初始化函数、其他函数、销毁函数
+*   类型成员排序：静态变量，私有字段、受保护字段、属性、事件、构造函数、初始化函数、静态函数、私有函数、公有函数、销毁函数
 *   数组、字典命名：小驼峰+类型，如itemList，itemDictionary
 *   事件回调命名，小驼峰+Action，如mapClickAction
 </code></pre>
-</blockquote>
 
-<h2 id="界面设计规范">界面设计规范</h2>
+<p><br></br></p>
 
-<blockquote>
+<h2 id="center-界面设计规范-center"><center>界面设计规范</center></h2>
+
 <h4 id="动画">动画</h4>
 
 <pre><code>*   界面打开速度：1000px/s
@@ -209,14 +209,22 @@
 
 <pre><code>*   
 </code></pre>
-</blockquote>
 
-<h2 id="功能开发流程规范">功能开发流程规范</h2>
+<p><br></br></p>
 
-<blockquote>
+<h2 id="center-功能开发流程规范-center"><center>功能开发流程规范</center></h2>
+
+<h4 id="前言">前言</h4>
+
+<pre><code>*   功能总体评分，需等功能开发完成后评定
+*   文件每一次修改记录，每一次修改后都需更新
+*   功能综合评价，需等开发完成后
+</code></pre>
+
 <h4 id="第一步-功能思考">第一步. 功能思考</h4>
 
-<pre><code>*   为什么要做这个功能？
+<pre><code>*   功能描述
+*   为什么要做这个功能？
 *   这个功能在整个游戏中处于什么样的位置？
 *   这能给游戏带来什么变化？
 *   与其他功能有何关联？
@@ -235,17 +243,15 @@
 *   字体大小是否符合规范？
 *   是否考虑界面动画？
 *   控件显示、宽高是否考虑多语言情况？
-*   代码是否执行编码规范？
 *   是否符合设计期望？
 </code></pre>
 
-<h4 id="第三步-场景逻辑实现">第三步. 场景逻辑实现</h4>
+<h4 id="第三步-逻辑功能实现">第三步. 逻辑功能实现</h4>
 
-<pre><code>*   UI原型是否制作完成？
-*   逻辑文件是否拆分、组织妥当？
+<pre><code>*   逻辑文件是否拆分、组织妥当？
 *   代码是否执行编码规范？
 *   代码设计上是否考虑功能的扩展性？
-*   有没有考虑性能问题？
+*   有没有考虑可能会造成性能瓶颈？
 *   有没有想过可能会有更简单的实现方式？
 </code></pre>
 
@@ -253,22 +259,22 @@
 
 <pre><code>*   界面表现是否符合设计期望？
 *   功能逻辑是否符合设计期望？
-*   是否留有瑕疵，如是否有bug尚未修复？
+*   是否留有瑕疵，是否有bug尚未修复？
 *   回头反思设计，是否有未考虑周到的地方？
 *   回头反思设计，是否有更好的表达方式？
+*   是否打包真机体验？
 </code></pre>
 
 <h4 id="后续补充">后续补充</h4>
 
 <pre><code>*   
 </code></pre>
-</blockquote>
 
-<h2 id="测试流程规范">测试流程规范</h2>
+<p><br></br></p>
 
-<blockquote>
+<h2 id="center-测试流程规范-center"><center>测试流程规范</center></h2>
+
 <h4 id="待定">待定</h4>
-</blockquote>
 </div></article>
 					
 						

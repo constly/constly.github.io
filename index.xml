@@ -10,14 +10,384 @@
     <updated>Sat, 11 Feb 2017 00:04:58 CST</updated>
     
     <item>
+      <title>欢迎光临</title>
+      <link>https://constly.github.io/post/welcome/</link>
+      <pubDate>Sat, 11 Feb 2017 00:04:58 CST</pubDate>
+      <author>多摩雄</author>
+      <guid>https://constly.github.io/post/welcome/</guid>
+      <description>&lt;pre&gt;&lt;code&gt;这里是多摩雄的游戏开发人生，欢迎您的到来。
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>模型编辑器设计自述</title>
+      <link>https://constly.github.io/post/modeleditor/</link>
+      <pubDate>Sun, 26 Feb 2017 00:00:00 UTC</pubDate>
+      <author>多摩雄</author>
+      <guid>https://constly.github.io/post/modeleditor/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;
+
+&lt;h5 id=&#34;完成评分&#34;&gt;完成评分：&lt;/h5&gt;
+
+&lt;h5 id=&#34;修改记录&#34;&gt;修改记录：&lt;/h5&gt;
+
+&lt;pre&gt;&lt;code&gt;*   2017年2月26   创建文件，撰写功能描述
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h5 id=&#34;综合评价-待定&#34;&gt;综合评价： 待定&lt;/h5&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/br&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;center-第一步-功能思考-center&#34;&gt;&lt;center&gt;第一步. 功能思考&lt;/center&gt;&lt;/h2&gt;
+
+&lt;h4 id=&#34;1-功能描述&#34;&gt;1.  功能描述&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;主要是参考MagicaVoxel，这也是游戏最初的灵感来源之一。
+挑战在于，我需要依据我具体的情况做一些改变，总不能原封不动的抄袭吧。
+屏幕布局如下：
+    左边第一列： 颜色选择面板
+        上半部分：固定颜色面板，由配置表配死的，不允许更改，每页数量为8*16，共6页
+                第一页依次从透明变为纯黑，如果玩家给方块设置透明，则表示删除
+        中间部分：自定义颜色面板，玩家可以自由指定，每页数量为8*4，共6页，双击可以主动打开颜色设置窗口
+        下半部分：颜色设置窗口，当前选中颜色的RGBA值
+
+    左边第二列： 
+        上半部分为操作模式，依次为
+            添加：此模式下，会依据设置在场景中绘制方块
+            移除：此模式下，会依据设置在场景中删除方块
+            染色：此模式下，会将指定的一个/多个方块设为选中的颜色
+            换色：此模式下，会替换指定方块的颜色
+            选色：此模式下，会在颜色面板中选中场景中指定方块的颜色
+            移动：此模式下，拖动鼠标鼠标左键可以移动所有方块        
+            选择：此模式下，可以选择符合条件的所有方块，然后对选中的对象执行复制、删除、移动操作  
+        下半部分为操作对象，依次为
+            单个： 单个方块
+            X轴： 同X轴的所有方块
+            Y轴： 同Y轴的所有方块    
+            Z轴： 同Z轴的所有方块
+            同色：同色的所有方块
+            长度：某长度范围内的所有方块，可以分别设置XYZ的值
+        底部为视图显示控制
+            这个优先级不高，可以暂缓
+
+    中间：
+        顶部有模型名字设置，增删动画帧，以及模型大小设置
+        底部有摄像机控制模式选择：这个待定，不是很懂这些模式
+        最底部为鼠标选中对象的tips。
+
+    右边第二列：
+        上半部分：显示当前选中方块的详细情况，包括位置信息，颜色索引信息，Icon
+            此处可以拖动位置
+            双击颜色，颜色面板会选中指定的颜色索引
+            双击Icon可以打开Icon编辑器
+        下半部分：
+            工具：清空、全满、反转
+            旋转：90度旋转XYZ
+            反转：反转XYZ
+            前进和后退命令
+
+    右边第一列：
+        显示模型文件列表
+            顶部：保存、另存、新建，删除
+            中间：文件列表
+            底部：前一页，当前页数位置，后一页，显示筛选
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;2-为什么要做这个功能&#34;&gt;2.  为什么要做这个功能？&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;可以DIY任意模型，这是本游戏的核心玩法之一，必做。  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;3-这个功能在整个游戏中处于什么样的位置&#34;&gt;3.  这个功能在整个游戏中处于什么样的位置？&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;核心基础功能，只有等该功能做好了，其他功能才能做。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;4-这能给游戏带来什么变化&#34;&gt;4.  这能给游戏带来什么变化？&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;丰富游戏内容，提供更多可能。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;5-与其他功能有何关联&#34;&gt;5.  与其他功能有何关联？&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;是地图DIY的基础。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;6-开发优先级多高&#34;&gt;6.  开发优先级多高？&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;很高，接下来会全力做。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;7-开发代价多大&#34;&gt;7.  开发代价多大？&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;蛮久的，大概要好几个月才能做好。    
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;8-是否考虑过后续扩展&#34;&gt;8.  是否考虑过后续扩展？&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;考虑中
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;9-设计是否简洁明了-或者说是否太复杂&#34;&gt;9.  设计是否简洁明了，或者说是否太复杂？&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;这个要等做得差不多了才能回答
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/br&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;center-第二步-ui原型制作-center&#34;&gt;&lt;center&gt;第二步. UI原型制作&lt;/center&gt;&lt;/h2&gt;
+
+&lt;h4 id=&#34;1-是不是想好再动手&#34;&gt;1.  是不是想好再动手？&lt;/h4&gt;
+
+&lt;h4 id=&#34;2-界面易用性高吗&#34;&gt;2.  界面易用性高吗？&lt;/h4&gt;
+
+&lt;h4 id=&#34;3-是否使用了黄金分割&#34;&gt;3.  是否使用了黄金分割？&lt;/h4&gt;
+
+&lt;h4 id=&#34;4-界面配色是否符合规范&#34;&gt;4.  界面配色是否符合规范？&lt;/h4&gt;
+
+&lt;h4 id=&#34;5-字体大小是否符合规范&#34;&gt;5.  字体大小是否符合规范？&lt;/h4&gt;
+
+&lt;h4 id=&#34;6-是否考虑界面动画&#34;&gt;6.  是否考虑界面动画？&lt;/h4&gt;
+
+&lt;h4 id=&#34;7-控件显示-宽高是否考虑多语言情况&#34;&gt;7.  控件显示、宽高是否考虑多语言情况？&lt;/h4&gt;
+
+&lt;h4 id=&#34;8-代码是否执行编码规范&#34;&gt;8.  代码是否执行编码规范？&lt;/h4&gt;
+
+&lt;h4 id=&#34;9-是否符合设计期望&#34;&gt;9.  是否符合设计期望？&lt;/h4&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/br&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;center-第三步-逻辑功能实现-center&#34;&gt;&lt;center&gt;第三步. 逻辑功能实现&lt;/center&gt;&lt;/h2&gt;
+
+&lt;h4 id=&#34;1-逻辑文件是否拆分-组织妥当&#34;&gt;1.  逻辑文件是否拆分、组织妥当？&lt;/h4&gt;
+
+&lt;h4 id=&#34;2-代码是否执行编码规范&#34;&gt;2.  代码是否执行编码规范？&lt;/h4&gt;
+
+&lt;h4 id=&#34;3-代码设计上是否考虑功能的扩展性&#34;&gt;3.  代码设计上是否考虑功能的扩展性？&lt;/h4&gt;
+
+&lt;h4 id=&#34;4-有没有考虑可能会造成性能瓶颈&#34;&gt;4.  有没有考虑可能会造成性能瓶颈？&lt;/h4&gt;
+
+&lt;h4 id=&#34;5-有没有想过可能会有更简单的实现方式&#34;&gt;5.  有没有想过可能会有更简单的实现方式？&lt;/h4&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/br&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;center-第四步-评估完成情况-center&#34;&gt;&lt;center&gt;第四步. 评估完成情况&lt;/center&gt;&lt;/h2&gt;
+
+&lt;h4 id=&#34;1-界面表现是否符合设计期望&#34;&gt;1.  界面表现是否符合设计期望？&lt;/h4&gt;
+
+&lt;h4 id=&#34;2-功能逻辑是否符合设计期望&#34;&gt;2.  功能逻辑是否符合设计期望？&lt;/h4&gt;
+
+&lt;h4 id=&#34;3-是否留有瑕疵-是否有bug尚未修复&#34;&gt;3.  是否留有瑕疵，是否有bug尚未修复？&lt;/h4&gt;
+
+&lt;h4 id=&#34;4-回头反思设计-是否有未考虑周到的地方&#34;&gt;4.  回头反思设计，是否有未考虑周到的地方？&lt;/h4&gt;
+
+&lt;h4 id=&#34;5-回头反思设计-是否有更好的表达方式&#34;&gt;5.  回头反思设计，是否有更好的表达方式？&lt;/h4&gt;
+
+&lt;h4 id=&#34;6-是否打包真机体验&#34;&gt;6.  是否打包真机体验？&lt;/h4&gt;</description>
+    </item>
+    
+    <item>
+      <title>导航菜单设计自述</title>
+      <link>https://constly.github.io/post/navigation/</link>
+      <pubDate>Sat, 25 Feb 2017 00:00:00 UTC</pubDate>
+      <author>多摩雄</author>
+      <guid>https://constly.github.io/post/navigation/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;
+
+&lt;h5 id=&#34;完成评分-b&#34;&gt;完成评分： B&lt;/h5&gt;
+
+&lt;h5 id=&#34;修改记录&#34;&gt;修改记录：&lt;/h5&gt;
+
+&lt;pre&gt;&lt;code&gt;*   2017年2月25   创建文件，撰写功能思考
+*   2017年2月26   功能开发完成，撰写实现细节
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h5 id=&#34;综合评价-中规中矩-基本符合预期&#34;&gt;综合评价： 中规中矩，基本符合预期&lt;/h5&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/br&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;center-第一步-功能思考-center&#34;&gt;&lt;center&gt;第一步. 功能思考&lt;/center&gt;&lt;/h2&gt;
+
+&lt;h4 id=&#34;1-功能描述&#34;&gt;1.  功能描述&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;屏幕右下角有一个“菜单”按钮，点击菜单后，出现七个选项
+*   存档： 顾名思义，存储游戏进度
+*   读档： 顾名思义，读取游戏进度
+*   编辑：有二级菜单
+    *   地图： 用于自由编辑门派地图，如增加/删除/移动/旋转建筑，DIY城墙城门等
+    *   建筑： 用于DIY每一个建筑的样式，地图由数栋建筑组成
+    *   道具： 用于DIY道具的3D模型和Icon，可以是一个坐垫，也可以是一把武器
+    *   人物： 用于DIY人物模型，人物攻击/移动动画等
+    *   妖兽： 用于DIY妖兽模型，妖兽攻击/移动动画等，人物跟妖兽在设计上可能会有一些不一样，所以暂时分开编辑
+    *   技能： 用于DIY技能特效
+    *   阵法： 用于DIY战斗阵法
+*   设置： 设置快捷键，画质，视距等
+*   关于： 显示游戏制作详情，作者等
+*   感谢： 感谢所有为该游戏做出贡献的人
+*   退出： 退出游戏
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;2-为什么要做这个功能&#34;&gt;2.  为什么要做这个功能？&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;因为我做的这个，既是游戏也是编辑器。为了方便玩家能快速找到需要的功能，所以设计这个功能。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;3-这个功能在整个游戏中处于什么样的位置&#34;&gt;3.  这个功能在整个游戏中处于什么样的位置？&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;假如游戏是一栋大楼，这个功能相当于是里面的电梯。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;4-这能给游戏带来什么变化&#34;&gt;4.  这能给游戏带来什么变化？&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;让各种乱七八糟的功能，有了一个统一的入口。同时也能帮助我理清开发思路，让我对游戏所有功能有了更直观的了解。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;5-与其他功能有何关联&#34;&gt;5.  与其他功能有何关联？&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;是其他功能的入口。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;6-开发优先级多高&#34;&gt;6.  开发优先级多高？&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;最先开发，先把原型做好，再一步一步开发具体功能。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;7-开发代价多大&#34;&gt;7.  开发代价多大？&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;比较简单，加上撰写文档，大概需要2天。 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;8-是否考虑过后续扩展&#34;&gt;8.  是否考虑过后续扩展？&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;菜单为配置形式，可以扩展。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;9-设计是否简洁明了-或者说是否太复杂&#34;&gt;9.  设计是否简洁明了，或者说是否太复杂？&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;应该没有设计得太复杂，采用的大多数编辑器中菜单的样式。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/br&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;center-第二步-ui原型制作-center&#34;&gt;&lt;center&gt;第二步. UI原型制作&lt;/center&gt;&lt;/h2&gt;
+
+&lt;h4 id=&#34;1-是不是想好再动手&#34;&gt;1.  是不是想好再动手？&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;是，琢磨了好几天
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;2-界面易用性高吗&#34;&gt;2.  界面易用性高吗？&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;还行吧，都长这样
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;3-是否使用了黄金分割&#34;&gt;3.  是否使用了黄金分割？&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;没有  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;4-界面配色是否符合规范&#34;&gt;4.  界面配色是否符合规范？&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;符合，严格按照规划开发
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;5-字体大小是否符合规范&#34;&gt;5.  字体大小是否符合规范？&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;符合，严格按照规划开发
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;6-是否考虑界面动画&#34;&gt;6.  是否考虑界面动画？&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;暂时没考虑
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;7-控件显示-宽高是否考虑多语言情况&#34;&gt;7.  控件显示、宽高是否考虑多语言情况？&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;文本倒是考虑了，界面宽高暂未考虑
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;8-代码是否执行编码规范&#34;&gt;8.  代码是否执行编码规范？&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;是，严格按照编码规范执行
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;9-是否符合设计期望&#34;&gt;9.  是否符合设计期望？&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;基本符合，虽然总感觉缺了点什么
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/br&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;center-第三步-逻辑功能实现-center&#34;&gt;&lt;center&gt;第三步. 逻辑功能实现&lt;/center&gt;&lt;/h2&gt;
+
+&lt;h4 id=&#34;1-逻辑文件是否拆分-组织妥当&#34;&gt;1.  逻辑文件是否拆分、组织妥当？&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;就只有一个文件，不需要拆分
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;2-代码是否执行编码规范&#34;&gt;2.  代码是否执行编码规范？&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;严格执行
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;3-代码设计上是否考虑功能的扩展性&#34;&gt;3.  代码设计上是否考虑功能的扩展性？&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;支持配置，可以扩展
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;4-有没有考虑可能会造成性能瓶颈&#34;&gt;4.  有没有考虑可能会造成性能瓶颈？&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;已经考虑，未发现瓶颈
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;5-有没有想过可能会有更简单的实现方式&#34;&gt;5.  有没有想过可能会有更简单的实现方式？&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;大概就这样吧，暂时没想到更简单的
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/br&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;center-第四步-评估完成情况-center&#34;&gt;&lt;center&gt;第四步. 评估完成情况&lt;/center&gt;&lt;/h2&gt;
+
+&lt;h4 id=&#34;1-界面表现是否符合设计期望&#34;&gt;1.  界面表现是否符合设计期望？&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;符合
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;2-功能逻辑是否符合设计期望&#34;&gt;2.  功能逻辑是否符合设计期望？&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;符合
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;3-是否留有瑕疵-是否有bug尚未修复&#34;&gt;3.  是否留有瑕疵，是否有bug尚未修复？&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;暂未发现
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;4-回头反思设计-是否有未考虑周到的地方&#34;&gt;4.  回头反思设计，是否有未考虑周到的地方？&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;暂不支持有多个菜单的情况，
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;5-回头反思设计-是否有更好的表达方式&#34;&gt;5.  回头反思设计，是否有更好的表达方式？&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;尚未发现
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;6-是否打包真机体验&#34;&gt;6.  是否打包真机体验？&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;已打包，符合预期期望
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
       <title>2017年2月</title>
       <link>https://constly.github.io/post/201702/</link>
       <pubDate>Wed, 08 Feb 2017 22:36:34 CST</pubDate>
       <author>多摩雄</author>
       <guid>https://constly.github.io/post/201702/</guid>
-      <description>
-
-&lt;h4 id=&#34;2月8日-周三-花费了一些时间-终于把站点搭建好了-很复杂的心情&#34;&gt;2月8日，周三: 花费了一些时间，终于把站点搭建好了，很复杂的心情&lt;/h4&gt;
+      <description>&lt;h4 id=&#34;2月8日-周三-花费了一些时间-终于把站点搭建好了-很复杂的心情&#34;&gt;2月8日，周三: 花费了一些时间，终于把站点搭建好了，很复杂的心情&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;*   本来准备搭建好后，发个长篇大论表决心、诉辛苦啥的，结果突然想起以前那些半途而废的经历，
     然后不知道说些什么好了...
@@ -36,6 +406,8 @@
 *   如果是闭关的话，每天发生了什么事情，会输出在屏幕上;
 *   门派成员数量做小数据，几十人可能就差不多了，太多在设计上会难以掌控;
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;2月10日-周五-新的一年开始了-项目组团建聚餐-杀牛场火锅&#34;&gt;2月10日，周五: 新的一年开始了，项目组团建聚餐(杀牛场火锅)&lt;/h4&gt;
 
@@ -160,8 +532,22 @@
 &lt;h4 id=&#34;2月24日-周五-白驹过隙&#34;&gt;2月24日，周五: 白驹过隙&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;*   精简代码和设计，去掉TextMeshPro，增加hei字体和多语言配置支持;
-*   编码规范整理; 
-*   功能开发流程整理;
+*   编码规范、颜色规范、开发流程规范整理; 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;2月25日-周六&#34;&gt;2月25日，周六：&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   看hugo文档，优化网站布局，给文章分类
+*   人生第一次给自己理发，除了后面没处理好没，看起来还过得去
+*   今天天气不错，阳光明媚，仿佛夏天快来了
+*   撰写游戏菜单功能设计说明，以及程序开发
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;2月26日-周日&#34;&gt;2月26日，周日：&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   打包相关功能开发，未来会支持打游戏包和编辑器包，然后将菜单打包出来看了下效果
+*   黄梅大姐介绍妹子认识，貌似还在重庆读研，哎，蛋疼的终身大事，不知所措
+*   撰写模型编辑器功能描述
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h4 id=&#34;待定&#34;&gt;待定&lt;/h4&gt;
@@ -172,8 +558,7 @@
 *   小地图显示房间
 *   寻路
 *   可以往房间墙上、地上摆放物件
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
   </channel>

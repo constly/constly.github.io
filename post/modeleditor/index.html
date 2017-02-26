@@ -1,0 +1,318 @@
+<!DOCTYPE HTML>
+
+<html lang="en-us">
+
+<head>
+	<meta charset="utf-8">
+	<title>模型编辑器设计自述 - 多摩雄的游戏人生</title>
+	<meta name="author" content="map[name:多摩雄 email:]">
+
+	
+	
+	<meta name="description" content="">
+	
+
+	
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+	<link href='' rel="alternate" title="多摩雄的游戏人生" type="application/atom+xml">
+	
+	<link rel="canonical" href="https://constly.github.io/post/modeleditor/">
+	<link href="https://constly.github.io//favicon.png" rel="shortcut icon">
+	<link href="https://constly.github.io//css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="https://constly.github.io//css/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
+	
+
+
+
+	<script src="https://constly.github.io//js/jquery.min.js"></script>
+	
+  
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">
+	
+	
+	
+</div>
+
+<img src="https://constly.github.io//images/head.jpg" alt="Profile Picture", height="128" width="128">
+
+<h1>
+	<a href="/">
+		多摩雄
+	</a>
+</h1>
+
+<p class="subtitle"> 
+	不抱怨，永远朝着目标前进。 
+</p>
+<nav id="main-nav">
+<ul class="main">
+    <li><a href="/">全部文章</a></li>
+    <li><a href="/post/">目录列表</a></li>
+    <li><a href="/summary">开发总结</a></li>
+    <li><a href="/about">关于作者</a></li>
+</ul>
+
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:constly.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+		
+		
+		
+			<a class="github" href='https://github.com/constly' title="GitHub">GitHub</a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+    	
+    	
+	</div>
+</nav>
+</header>
+			</div>
+		</div>
+		<div class="mid-col">
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner">
+					<div itemscope itemtype="http://schema.org/Blog">
+					<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <h1 class="title" itemprop="name">模型编辑器设计自述</h1>
+	<div class="entry-content" itemprop="articleBody"><p></p>
+
+<h5 id="完成评分">完成评分：</h5>
+
+<h5 id="修改记录">修改记录：</h5>
+
+<pre><code>*   2017年2月26   创建文件，撰写功能描述
+</code></pre>
+
+<h5 id="综合评价-待定">综合评价： 待定</h5>
+
+<p><br></br></p>
+
+<h2 id="center-第一步-功能思考-center"><center>第一步. 功能思考</center></h2>
+
+<h4 id="1-功能描述">1.  功能描述</h4>
+
+<pre><code>主要是参考MagicaVoxel，这也是游戏最初的灵感来源之一。
+挑战在于，我需要依据我具体的情况做一些改变，总不能原封不动的抄袭吧。
+屏幕布局如下：
+    左边第一列： 颜色选择面板
+        上半部分：固定颜色面板，由配置表配死的，不允许更改，每页数量为8*16，共6页
+                第一页依次从透明变为纯黑，如果玩家给方块设置透明，则表示删除
+        中间部分：自定义颜色面板，玩家可以自由指定，每页数量为8*4，共6页，双击可以主动打开颜色设置窗口
+        下半部分：颜色设置窗口，当前选中颜色的RGBA值
+
+    左边第二列： 
+        上半部分为操作模式，依次为
+            添加：此模式下，会依据设置在场景中绘制方块
+            移除：此模式下，会依据设置在场景中删除方块
+            染色：此模式下，会将指定的一个/多个方块设为选中的颜色
+            换色：此模式下，会替换指定方块的颜色
+            选色：此模式下，会在颜色面板中选中场景中指定方块的颜色
+            移动：此模式下，拖动鼠标鼠标左键可以移动所有方块        
+            选择：此模式下，可以选择符合条件的所有方块，然后对选中的对象执行复制、删除、移动操作  
+        下半部分为操作对象，依次为
+            单个： 单个方块
+            X轴： 同X轴的所有方块
+            Y轴： 同Y轴的所有方块    
+            Z轴： 同Z轴的所有方块
+            同色：同色的所有方块
+            长度：某长度范围内的所有方块，可以分别设置XYZ的值
+        底部为视图显示控制
+            这个优先级不高，可以暂缓
+
+    中间：
+        顶部有模型名字设置，增删动画帧，以及模型大小设置
+        底部有摄像机控制模式选择：这个待定，不是很懂这些模式
+        最底部为鼠标选中对象的tips。
+
+    右边第二列：
+        上半部分：显示当前选中方块的详细情况，包括位置信息，颜色索引信息，Icon
+            此处可以拖动位置
+            双击颜色，颜色面板会选中指定的颜色索引
+            双击Icon可以打开Icon编辑器
+        下半部分：
+            工具：清空、全满、反转
+            旋转：90度旋转XYZ
+            反转：反转XYZ
+            前进和后退命令
+
+    右边第一列：
+        显示模型文件列表
+            顶部：保存、另存、新建，删除
+            中间：文件列表
+            底部：前一页，当前页数位置，后一页，显示筛选
+</code></pre>
+
+<h4 id="2-为什么要做这个功能">2.  为什么要做这个功能？</h4>
+
+<pre><code>可以DIY任意模型，这是本游戏的核心玩法之一，必做。  
+</code></pre>
+
+<h4 id="3-这个功能在整个游戏中处于什么样的位置">3.  这个功能在整个游戏中处于什么样的位置？</h4>
+
+<pre><code>核心基础功能，只有等该功能做好了，其他功能才能做。
+</code></pre>
+
+<h4 id="4-这能给游戏带来什么变化">4.  这能给游戏带来什么变化？</h4>
+
+<pre><code>丰富游戏内容，提供更多可能。
+</code></pre>
+
+<h4 id="5-与其他功能有何关联">5.  与其他功能有何关联？</h4>
+
+<pre><code>是地图DIY的基础。
+</code></pre>
+
+<h4 id="6-开发优先级多高">6.  开发优先级多高？</h4>
+
+<pre><code>很高，接下来会全力做。
+</code></pre>
+
+<h4 id="7-开发代价多大">7.  开发代价多大？</h4>
+
+<pre><code>蛮久的，大概要好几个月才能做好。    
+</code></pre>
+
+<h4 id="8-是否考虑过后续扩展">8.  是否考虑过后续扩展？</h4>
+
+<pre><code>考虑中
+</code></pre>
+
+<h4 id="9-设计是否简洁明了-或者说是否太复杂">9.  设计是否简洁明了，或者说是否太复杂？</h4>
+
+<pre><code>这个要等做得差不多了才能回答
+</code></pre>
+
+<p><br></br></p>
+
+<h2 id="center-第二步-ui原型制作-center"><center>第二步. UI原型制作</center></h2>
+
+<h4 id="1-是不是想好再动手">1.  是不是想好再动手？</h4>
+
+<h4 id="2-界面易用性高吗">2.  界面易用性高吗？</h4>
+
+<h4 id="3-是否使用了黄金分割">3.  是否使用了黄金分割？</h4>
+
+<h4 id="4-界面配色是否符合规范">4.  界面配色是否符合规范？</h4>
+
+<h4 id="5-字体大小是否符合规范">5.  字体大小是否符合规范？</h4>
+
+<h4 id="6-是否考虑界面动画">6.  是否考虑界面动画？</h4>
+
+<h4 id="7-控件显示-宽高是否考虑多语言情况">7.  控件显示、宽高是否考虑多语言情况？</h4>
+
+<h4 id="8-代码是否执行编码规范">8.  代码是否执行编码规范？</h4>
+
+<h4 id="9-是否符合设计期望">9.  是否符合设计期望？</h4>
+
+<p><br></br></p>
+
+<h2 id="center-第三步-逻辑功能实现-center"><center>第三步. 逻辑功能实现</center></h2>
+
+<h4 id="1-逻辑文件是否拆分-组织妥当">1.  逻辑文件是否拆分、组织妥当？</h4>
+
+<h4 id="2-代码是否执行编码规范">2.  代码是否执行编码规范？</h4>
+
+<h4 id="3-代码设计上是否考虑功能的扩展性">3.  代码设计上是否考虑功能的扩展性？</h4>
+
+<h4 id="4-有没有考虑可能会造成性能瓶颈">4.  有没有考虑可能会造成性能瓶颈？</h4>
+
+<h4 id="5-有没有想过可能会有更简单的实现方式">5.  有没有想过可能会有更简单的实现方式？</h4>
+
+<p><br></br></p>
+
+<h2 id="center-第四步-评估完成情况-center"><center>第四步. 评估完成情况</center></h2>
+
+<h4 id="1-界面表现是否符合设计期望">1.  界面表现是否符合设计期望？</h4>
+
+<h4 id="2-功能逻辑是否符合设计期望">2.  功能逻辑是否符合设计期望？</h4>
+
+<h4 id="3-是否留有瑕疵-是否有bug尚未修复">3.  是否留有瑕疵，是否有bug尚未修复？</h4>
+
+<h4 id="4-回头反思设计-是否有未考虑周到的地方">4.  回头反思设计，是否有未考虑周到的地方？</h4>
+
+<h4 id="5-回头反思设计-是否有更好的表达方式">5.  回头反思设计，是否有更好的表达方式？</h4>
+
+<h4 id="6-是否打包真机体验">6.  是否打包真机体验？</h4></div></article>
+					
+						
+
+	
+
+
+		
+			
+		
+
+		
+			
+		
+
+		
+			
+		
+
+		
+
+	
+	
+		
+  	
+  	
+
+
+					
+					
+					
+
+
+				    </div>
+				</div>
+			</div>
+			<footer id="footer" class="inner">Copyright &copy; 2017
+
+    多摩雄
+
+
+
+
+<script src="https://constly.github.io//js/slash.js"></script>
+<script src="https://constly.github.io//js/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script></footer>
+		</div>
+	</div>
+	
+</body>
+</html>
