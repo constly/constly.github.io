@@ -10,6 +10,39 @@
     <updated>Mon, 01 Jan 0001 00:00:00 UTC</updated>
     
     <item>
+      <title>2017年3月</title>
+      <link>https://constly.github.io/post/201703/</link>
+      <pubDate>Wed, 01 Mar 2017 22:36:34 CST</pubDate>
+      <author>多摩雄</author>
+      <guid>https://constly.github.io/post/201703/</guid>
+      <description>&lt;h4 id=&#34;3月1日-周三-眨眼就年后一个月了&#34;&gt;3月1日，周三: 眨眼就年后一个月了&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   新建“设置界面设计自述”文档
+*   将模型编辑界面拆分为5个子窗口，不然太大了，不好编辑
+*   我得把任意形状多边形的编辑加入到开发计划中，这个可以用来做障碍物，做技能特效，做特殊道具等等之类的。有了这个功能后，
+    我几乎就可以完全摆脱对美术的依赖了，嗯，既然是早晚会用到的，那不如现在就规划好，免得将来改动太大。
+*   好吧，不得不承认，这个至少是三年计划了，很可能是五年，甚至更久。。。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;3月2日-周四-特别的一天&#34;&gt;3月2日，周四：特别的一天&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   完全无心写代码
+*   不行，某件事情一定要尝试下，反正失败了也不会损失什么，除了有点尴尬外。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;3月3日-周五&#34;&gt;3月3日，周五：&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   座位上方的灯光有点晃眼，以前工作太忙还没注意，最近没啥案子，才发现不能再忍下去了，不然眼睛受不了。看美术同学那边有像芭
+    蕉页的东东可以遮光，然后表示宜家有卖。。。结果我今天跑去，人家说这东西现在缺货，淘宝上也没看见卖的，看来只能想想其他办法了
+*   新版编辑器框架搭建ing
+*   额。。尝试了下昨天想的事。。怎么说呢，没想象中坏，也没想象中的好，慢慢来吧。。
+*   然后就是，除了我以外，今后会有另外一个人知道这个地方了。。。
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
       <title>2017年2月</title>
       <link>https://constly.github.io/post/201702/</link>
       <pubDate>Wed, 08 Feb 2017 22:36:34 CST</pubDate>
