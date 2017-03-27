@@ -323,9 +323,23 @@
 
 &lt;h4 id=&#34;3月24日-周五&#34;&gt;3月24日，周五&lt;/h4&gt;
 
-&lt;pre&gt;&lt;code&gt;*   项目准备开日语版本，琢磨来琢磨去，我向老何申请如果没人主动去的话，我可以去。看看情况吧，如果是我负责的话，
-    倒是可以好好做下去。如果是某些不是很主动的人负责，那我就不去受气了
-*   cube动画的新建/删除/复制功能
+&lt;pre&gt;&lt;code&gt;*   cube动画的新建/删除/复制功能
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;3月25日-周六&#34;&gt;3月25日，周六&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   cube动画帧UI开发中（添加/删除/移动/复制/复位/右键菜单等）
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;3月26日-周日&#34;&gt;3月26日，周日&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   将模型渲染细分为：cubeRender, gridRender, vertexRender, lineRender。 以及模型的移动/清空/全满功能开发
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;3月27日-周一&#34;&gt;3月27日，周一&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   以前有点蠢啊，去除ModelRender类，将渲染集成在CubeData中，方便接下来的动画绘制。
+*   还是跑去做日语版本，队友还可以。
 &lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
