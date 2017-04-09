@@ -183,7 +183,7 @@
 <pre><code>*   事件以On开头，如OnGameStart
 *   返回bool的函数，以Is、Try、Can开头，如CanOpenUI()
 *   常量命名：全大写，以下划线分割，如MAP_SIZE
-*   文件命名：大驼峰法，如GameManager
+*   文件命名：全小写，以下划线分割，如game_manager.lua
 *   枚举命名，大驼峰+Enum，如ItemTypeEnum，枚举值以大驼峰命名
 </code></pre>
 
@@ -209,7 +209,6 @@
 *   public变量命名: 不允许出现，需要用属性封装，如public float Price {get, set;}
 *   函数参数命名: 小驼峰法
 *   函数名命名：大驼峰法
-*   文件名需与类名保持一致
 *   类型成员排序：静态变量，私有字段、受保护字段、属性、事件、构造函数、初始化函数、静态函数、私有函数、公有函数、销毁函数
 *   数组、字典命名：小驼峰+类型，如itemList，itemDictionary
 *   事件回调命名，小驼峰+Action，如mapClickAction
