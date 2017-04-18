@@ -280,6 +280,32 @@ PS:
 *   将运行目录移到GameEditor下面，这样就不必频繁拷贝core目录了
 *   客户端文件整理，底层登录逻辑开发ing
 *   用了下《番茄土豆》，挺好的
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;4月14日-周五&#34;&gt;4月14日，周五&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   服务器数据存储开发ing
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;4月15日-周六&#34;&gt;4月15日，周六&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   服务器数据存储/加载流程跑通
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;4月16日-周日&#34;&gt;4月16日，周日&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   客户端登录界面
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;4月17日-周一&#34;&gt;4月17日，周一&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   服务器启动菜单
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;4月18日-周二&#34;&gt;4月18日，周二&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   服务器多语言支持。
+*   启动菜单还是有问题，控制台显示不全，蛋疼    
 &lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
