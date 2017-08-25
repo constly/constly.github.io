@@ -7,7 +7,290 @@
     <language>en-us</language>
     <author>多摩雄</author>
     
-    <updated>Tue, 04 Apr 2017 00:00:00 UTC</updated>
+    <updated>Tue, 01 Aug 2017 22:36:34 CST</updated>
+    
+    <item>
+      <title>2017年8月</title>
+      <link>https://constly.github.io/post/201708/</link>
+      <pubDate>Tue, 01 Aug 2017 22:36:34 CST</pubDate>
+      <author>多摩雄</author>
+      <guid>https://constly.github.io/post/201708/</guid>
+      <description>&lt;h4 id=&#34;8月12日-周六&#34;&gt;8月12日，周六:&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   月初的时候，准备建新库做少枪2，需要什么资源就去少枪1中拖，结果慢慢发现少枪1中的单机关卡、咖啡馆、diy系统策划都要。。
+*   程序倒是希望关卡都使用帧同步那套，这样维护起来就简单多了，可是想到只有四个月的工期，而帧同步那边还只有个底层框架。。
+*   经过几天的纠结，也尝试过拖库，发现耦合度实在是太高了，很难想要什么拖什么，最终还是决定在少枪1的基础上当个资料片来开发
+*   程序之所以不想在少枪1的基础上开发，实在是因为少枪1的代码太乱太蠢风格太多异了。迫于工期太紧，只能含泪忍了
+*   目前我负责PVP，准备从头用帧同步重写一遍。主要工作就是把少枪1的技能都实现一遍，除此之外还有房间逻辑，怪物AI，寻路之类的
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;8月13日-周日&#34;&gt;8月13日，周日&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   整理了一份framework，方便以后做小工具
+*   建了study工程。。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;8月16日-周三&#34;&gt;8月16日，周三&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   study项目，开始制作战斗界面
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;8月18日-周五&#34;&gt;8月18日，周五&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   战斗demo开发中，决定将战斗放在lua中，底层faction、player等数据放在CSharp里
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;8月19日-周六&#34;&gt;8月19日，周六&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   战斗人物出场动画    
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;8月20日-周日&#34;&gt;8月20日，周日&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   将UI分了三层：background,ui,uitop。
+*   entry界面和login界面开发中
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;8月22日-周二&#34;&gt;8月22日，周二&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   哎呦喂，世事无常，少枪2项目又被取消了。。。
+*   存档选择界面和设置界面初版制作
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;8月23日-周三&#34;&gt;8月23日，周三&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   新增对话、选项、作者介绍界面  
+*   白天做公司项目，回来做自己项目，完美。
+*   chen要准备离职了。。。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;8月25日-周五&#34;&gt;8月25日，周五&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   唔，又。。。。蛋疼
+*   主界面prefab制作中
+*   那点港币都快转了三个月了，还没转过来，总是些乱七八糟的问题。我希望是...好事多磨。
+*   今天被“还杀了一个程序员祭天”笑死了
+*   回想前几个月，发现自己的状态有点不对劲。今天看到些东西，很有感触，希望自己接下来能有所改变。
+*   主要是三点：保持微笑，向周围传播正能量；心态平和，不动怒，不生气，不抱怨；敢作敢为，多思考。
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>2017年7月</title>
+      <link>https://constly.github.io/post/201707/</link>
+      <pubDate>Sat, 01 Jul 2017 22:36:34 CST</pubDate>
+      <author>多摩雄</author>
+      <guid>https://constly.github.io/post/201707/</guid>
+      <description>&lt;h4 id=&#34;7月2日-周日&#34;&gt;7月2日，周日:&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   纠结了下这么久，实在是不好解决美术模型的问题，于是准备试试文字游戏。。。
+*   使用axure制作游戏原型中
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;7月4日-周二&#34;&gt;7月4日，周二:&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   研究腾讯的behaviac中，可能会用到吧
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;7月18日-周二&#34;&gt;7月18日，周二：&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   上个星期去吃面，服务小哥开口就说：叔，你看起来有30了吧。。。额，额，额，至今没恢复过来。。
+*   behaviac在安卓上还是闪退，烦
+*   最近又有点迷茫痛苦了，埃
+*   人生最怕的就是坚持，时不时逛下“双子骑士”的个人网站，惭愧不已
+*   过几天要去珠海参加一个公司的技术分享会，除了前几年去过三亚外，这是人生第二次出远门了
+*   埃，想到今年已经过去一半了，依然一无所成，想到自己这一生可能就会这么平凡的过去，慌，无助
+*   前几天沉迷于“差不多英雄（almost a hero）”，荒废了很多时间，严重影响了工作，也不知道游戏到底该怎么做才好
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;7月25日-周二&#34;&gt;7月25日，周二&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   前天到今天去中山温泉酒店参加了西山居的技术分享会，还行，增长了很多见识（主要是游戏开发优化辅助工具上面）
+*   还在奇怪为啥老贺要请吃饭，原来，我们做了两个月的竞技版被干掉了。。。接下来要么去少枪2，要么去TGame
+*   世事无常啊，很蛋疼
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;月度总结&#34;&gt;月度总结&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;这个月起初是在全力做竞技版，结果月底的时候，教主表示竞技版取消了，要全力做少枪2，并且时间只有四个月。。。
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>2017年6月</title>
+      <link>https://constly.github.io/post/201706/</link>
+      <pubDate>Thu, 01 Jun 2017 22:36:34 CST</pubDate>
+      <author>多摩雄</author>
+      <guid>https://constly.github.io/post/201706/</guid>
+      <description>&lt;h4 id=&#34;6月3日-周六&#34;&gt;6月3日，周六:&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   七月版本的包终于打了，接下来全力做少枪2
+*   地形编辑器开发ing，争取把这个做漂亮点，功能多点，一切都是希望能把少枪2继续做下去
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;6月9日-周五&#34;&gt;6月9日，周五&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   找了个TrueSync的帧同步框架，研究ing
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h5 id=&#34;6月11日-周日&#34;&gt;6月11日，周日&lt;/h5&gt;
+
+&lt;pre&gt;&lt;code&gt;*   A了大半年后，再次回到剑三。。。    
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;6月17日-周六&#34;&gt;6月17日，周六&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   本来是说这周要做个demo的，结果在使用TrueSync的过程中遇到了很多坑，再加上这个也无法解决两个人时的情况，于是
+    便决定重新设计。把逻辑写在dll中，服务器和客户端共用。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;6月18日-周日&#34;&gt;6月18日，周日&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   今天跑去公司重写了下架构，就是模仿守望先锋，把world分为system，entity和component。写得不太好，埃，慢慢改进吧。        
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;6月23日-周五&#34;&gt;6月23日，周五&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   发现先前写的ECS框架不太好，准备参考谷歌的，重新改下
+*   地形编辑器开发中
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;6月28日-周三&#34;&gt;6月28日，周三&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   今天跟斯斯对了下，竞技版大概把supercell的作为参考对象，然后我就准备搞个地形编辑器先
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;月度总结&#34;&gt;月度总结&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;这个月似乎过得很慢，发生了很多很多事情。
+第一个星期：我们先用C#实现了基本的帧同步逻辑，至少走路是跑通了
+第二个星期：我们找了个TrueSync框架，看起来很厉害的样子，于是决定抛弃我们写的，转而使用这个
+第三个星期：在使用TrueSync的过程中遇到了很多问题，并且这个也无法解决只有两人时的效验，大家讨论过后，决定用C++重写
+第四个星期：由于程序内部在实现上有一些分歧，气氛有点微妙尴尬，艰难度过一个星期后，大家坐下来讨论了下，最终决定以双龙的为准
+现在终于可以安心开发游戏了，这一个月来由于程序内部的分歧，每天都睡不着觉，很累，深夜中无数次叹息。
+幸好在月底大家达成了一致，不然总觉得自己会死在这个项目 = =
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>2017年5月</title>
+      <link>https://constly.github.io/post/201705/</link>
+      <pubDate>Mon, 01 May 2017 22:36:34 CST</pubDate>
+      <author>多摩雄</author>
+      <guid>https://constly.github.io/post/201705/</guid>
+      <description>&lt;h4 id=&#34;5月1日-周一-劳动节&#34;&gt;5月1日，周一: 劳动节&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   project(文件目录)面板右键菜单以及单击给文件改名
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;5月2日-周二&#34;&gt;5月2日，周二&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   项目又开始新一轮加班了
+*   又要有人离开公司了。。。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;5月3日-周三&#34;&gt;5月3日，周三&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   编辑器底部(ui_bottom)和xobject(物件基类)开发ing 
+*   有空还是多玩下自己做的游戏(少枪)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;5月4日-周四&#34;&gt;5月4日，周四&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   物件层次结构面板开发ing
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;5月5日-周五&#34;&gt;5月5日，周五&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   物件层级结构面板开发ing（展开/收拢/右键菜单显示） 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;5月6日-周六&#34;&gt;5月6日，周六&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   物件层级结构面板支持Ctrl+Shift选中多个节点，支持任意位置拖动 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;5月7日-周日&#34;&gt;5月7日，周日&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   物件层次结构面板右键菜单：复制、粘贴、删除、创建空节点功能开发 
+*   新建剪切板管理类，以便可以复制和粘贴各种数据
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;5月8日-周一&#34;&gt;5月8日，周一&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   忙，累
+*   今天美术同学问道，能不能让一张2D图片的剪影发亮呢？蛮有意思的，想想怎么做
+*   少枪日语版本被取消了，要求全力做T项目 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;5月9日-周二&#34;&gt;5月9日，周二&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   文件目录面板支持选中多个文件（像物件层次结构面板那样，可以同时操纵多个节点）  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;5月10日-周三&#34;&gt;5月10日，周三&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   忙，累，肩膀痛
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;5月11日-周四&#34;&gt;5月11日，周四&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   可以考虑在道具或者玩家身上定义Dictionary&amp;lt;string, int&amp;gt;之类的扩展字段，新加的属性全存在字典中，这样能在一定程度上防协议热更新需求。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;5月12日-周五&#34;&gt;5月12日，周五&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   程序+测试团建，好久没喝酒了，脑壳痛  
+*   老贺也在催找对象了。。因为老贺觉得你要是没对象的话，就不稳定，随时有可能离职跑路。。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;5月13日-周六&#34;&gt;5月13日，周六&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   文件目录面板鼠标右键功能、文件拖动功能开发   
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;5月14日-周日&#34;&gt;5月14日，周日&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   跑去大面铺看了下房子，新房全卖光了，一套70多平的二手房要首付40万左右才能拿下。。日子没法过了    
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;5月15日-周一&#34;&gt;5月15日，周一&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   忙不完的事   
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;5月19日-周五&#34;&gt;5月19日，周五&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   模型详情面板开发中（做了点基本的界面，肩膀实在酸痛，蛋疼）   
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;5月21日-周日&#34;&gt;5月21日，周日&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   玩了下异星工厂
+*   发现我不管怎么做，都是绕不开UI美术这个坑的，不如做2D游戏？！！因为，3D的坑实在是有点深
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;5月23日-周二&#34;&gt;5月23日，周二&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   前段时间日语版被干掉后，现在准备将少枪改为强竞技的的游戏，至少初版demo类似于大逃杀吧，做好后得去珠海给老大看。
+*   暂定是双龙、我、建军三个来做这个demo。未来的一切都是未知的，也不知道这个项目最终会不会批下来，也行一切看我们这个demo做得怎么样吧。
+*   用帧同步+UDP，从来没触碰过这块的东西，蛮有挑战的，有点激动！    加油把这个做起来吧。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;月度总结&#34;&gt;月度总结&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;计划赶不上变化，现在正在全力研究帧同步ing。这个demo的战斗部分是我来做，很激动，等了这么多年，终于可以做自己喜欢做的东西了。
+尽力把这个demo做好，这样才有机会立项继续做下去，不然又要回去搞UI了，很蛋疼。
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
     
     <item>
       <title>模型编辑器设计说明(第二代)</title>
@@ -295,6 +578,76 @@ PS:
 
 &lt;pre&gt;&lt;code&gt;*   服务器多语言支持。
 *   启动菜单还是有问题，控制台显示不全，蛋疼    
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;4月19日-周三&#34;&gt;4月19日，周三&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   客户端本地存档数据编辑（新建/删除/复制等）          
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;4月20日-周四&#34;&gt;4月20日，周四&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   ............................
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;4月21日-周五&#34;&gt;4月21日，周五&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   将core改为_core
+*   服务器user开发中      
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;4月22日-周六&#34;&gt;4月22日，周六&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   三圣乡团建
+*   大海捞针
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;4月23日-周日&#34;&gt;4月23日，周日&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   有了些新的想法，可能还是要把编辑器独立出来，方便开源
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;4月24日-周一&#34;&gt;4月24日，周一&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   新建designer工程
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;4月25日-周二&#34;&gt;4月25日，周二&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   编辑器菜单栏开发中   
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;4月26日-周三&#34;&gt;4月26日，周三&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   navigation,hierarchy与inspector界面布局调整ing 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;4月27日-周四&#34;&gt;4月27日，周四&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   文件目录界面调整ing
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;4月28日-周五&#34;&gt;4月28日，周五&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   project窗口中的文件路径 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;4月29日-周六&#34;&gt;4月29日，周六&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   跟王他们去江安，文星逛了圈。转眼毕业快四年了
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;4月30日-周日&#34;&gt;4月30日，周日&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*   文件目录界面开发中，可以像unity那样，缩放显示区域
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;月度总结&#34;&gt;月度总结：&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;    尝试了下很早以前构想的方案：即可支持本地玩，也能局域网一起玩。初步试了下，技术上是没问题的(把服务器编成
+一个dll集成在unity中)，这个坑先留到，等以后有空了看做不做。
+    然后就是推翻了以前的设计，从头开发第二代模型编辑器。      
+    岁月如梭，慢慢来吧。
 &lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
