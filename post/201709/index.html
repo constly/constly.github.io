@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+
+<html lang="en-us">
+
+<head>
+	<meta charset="utf-8">
+	<title>2017年9月 - 多摩雄的游戏人生</title>
+	<meta name="author" content="map[name:多摩雄 email:]">
+
+	
+	
+	<meta name="description" content="">
+	
+
+	
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+	<link href='' rel="alternate" title="多摩雄的游戏人生" type="application/atom+xml">
+	
+	<link rel="canonical" href="https://constly.github.io/post/201709/">
+	<link href="https://constly.github.io//favicon.png" rel="shortcut icon">
+	<link href="https://constly.github.io//css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="https://constly.github.io//css/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
+	
+
+
+
+	<script src="https://constly.github.io//js/jquery.min.js"></script>
+	
+  
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">
+	
+	
+	
+</div>
+
+<img src="https://constly.github.io//images/head.jpg" alt="Profile Picture", height="128" width="128">
+
+<h1>
+	<a href="/">
+		多摩雄
+	</a>
+</h1>
+
+<p class="subtitle"> 
+	一生只做一部游戏。 
+</p>
+<nav id="main-nav">
+<ul class="main">
+    <li><a href="/">全部文章</a></li>
+    <li><a href="/post/">目录列表</a></li>
+    <li><a href="/summary">开发总结</a></li>
+    <li><a href="/about">关于作者</a></li>
+</ul>
+
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:constly.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+		
+		
+		
+			<a class="github" href='https://github.com/constly' title="GitHub">GitHub</a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+    	
+    	
+	</div>
+</nav>
+</header>
+			</div>
+		</div>
+		<div class="mid-col">
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner">
+					<div itemscope itemtype="http://schema.org/Blog">
+					<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <h1 class="title" itemprop="name">2017年9月</h1>
+	<div class="entry-content" itemprop="articleBody"><h4 id="9月1日-周五">9月1日，周五:</h4>
+
+<pre><code>*   今天想了下，自动生成地图不可取，这会导致很多东西不好设计。唔，需要做一个地图编辑器。
+*   整理了下游戏中的成就系统。实在是脑袋有点糊，虽然知道游戏大方向怎么做，但具体一些细节，又有点懵，不知道如何下手。
+    所以，决定先把成就整理一版出来，以便自己有一个清晰的目标。
+      
+*   暂且把成就分为三类：
+    独领风骚
+        境界: 玩家达到了什么样的境界（从练气到大乘共十个境界，每个境界分十层）
+        粉丝: 玩家收到了多少封粉丝来信（所谓的来信，其实大多就是情书了。曾经有段时间自己很想写这个，只是没有找到目标，
+             后来就不了了之了。现实达不到的，就转到游戏里来= =）
+        生日: 玩家收到多少生日礼物（玩家过生日的时候，弟子、附属门派都会来送礼。可能很多人跟我一样，几乎不过生日，那么，
+             让游戏来弥补这些遗憾吧）
+        月老: 玩家助多少弟子解决了单身问题（游戏跟现实一样，很多道友找不到合适的另一半。我对这个话题倒是有一些感触，希望这
+             个功能能与玩家产生共鸣）
+        头条: 玩家共上了多少次头条（游戏中有百晓生这样的角色，每个月会发布一些八卦的新闻，跟今天的新闻客户端差不多。大概
+             就是哪里出现绝世凶兽、哪里有宝物出世、谁又被带了原谅帽、哪些门派又要结盟等等之类的。说实话，想要把这个做好，还
+             挺不好做的，后面再看情况吧） 
+
+    韬光养晦
+        人数: 弟子人数达到%d人（弟子越多门派越强大嘛）
+        境界: 达到XX境界的弟子有XX人（这个主要是鼓励玩家多多培养其他人，不要只顾自己）
+        炼丹师：门派中达到XX境界的炼丹师有XX人（鼓励玩家全方位培养弟子）
+        炼器师：门派中达到XX境界的炼器师有XX人（鼓励玩家全方位培养弟子）
+        御兽师：门派中达到XX境界的御兽师有XX人（鼓励玩家全方位培养弟子）
+
+    雄霸天下
+        挑战: 成功挑战%d个门派（正所谓不打不相识）
+        征服: 成功征服%d个门派（征服后，以后就跟主角混了，等过生日，他们会来送礼）
+        扫荡: 成功扫荡%d个门派（对恶贯满盈的门派，直接扫荡干净得了，惩奸除恶还可以增加名望）
+        绝地: 成功探索%d个绝地 (类似于现在的高科技领域？？可以增加声望)
+</code></pre></div></article>
+					
+						
+
+	
+
+
+		
+			
+		
+
+		
+			
+		
+
+		
+			
+		
+
+		
+
+	
+	
+		
+  	
+  	
+
+
+					
+					
+					
+
+
+				    </div>
+				</div>
+			</div>
+			<footer id="footer" class="inner">Copyright &copy; 2017
+
+    多摩雄
+
+
+
+
+<script src="https://constly.github.io//js/slash.js"></script>
+<script src="https://constly.github.io//js/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script></footer>
+		</div>
+	</div>
+	
+</body>
+</html>
