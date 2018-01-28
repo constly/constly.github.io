@@ -1,0 +1,238 @@
+<!DOCTYPE HTML>
+
+<html lang="en-us">
+
+<head>
+	<meta charset="utf-8">
+	<title>2018年1月-2月 - 多摩雄的游戏人生</title>
+	<meta name="author" content="map[email: name:多摩雄]">
+
+	
+	
+	<meta name="description" content="">
+	
+
+	
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+	<link href='' rel="alternate" title="多摩雄的游戏人生" type="application/atom+xml">
+	
+	<link rel="canonical" href="https://constly.github.io/post/201801/">
+	<link href="https://constly.github.io//favicon.png" rel="shortcut icon">
+	<link href="https://constly.github.io//css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="https://constly.github.io//css/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
+	
+
+
+
+	<script src="https://constly.github.io//js/jquery.min.js"></script>
+	
+  
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">
+	
+	
+	
+</div>
+
+<img src="https://constly.github.io//images/head.jpg" alt="Profile Picture", height="128" width="128">
+
+<h1>
+	<a href="/">
+		多摩雄
+	</a>
+</h1>
+
+<p class="subtitle"> 
+	一生只做一部游戏。 
+</p>
+<nav id="main-nav">
+<ul class="main">
+    <li><a href="/">全部文章</a></li>
+    <li><a href="/post/">目录列表</a></li>
+    <li><a href="/summary">开发总结</a></li>
+    <li><a href="/about">作者自述</a></li>
+</ul>
+
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:constly.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+		
+		
+		
+			<a class="github" href='https://github.com/constly' title="GitHub">GitHub</a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+    	
+    	
+	</div>
+</nav>
+</header>
+			</div>
+		</div>
+		<div class="mid-col">
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner">
+					<div itemscope itemtype="http://schema.org/Blog">
+					<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <h1 class="title" itemprop="name">2018年1月-2月</h1>
+	<div class="entry-content" itemprop="articleBody"><h4 id="1月4日-周四">1月4日，周四:</h4>
+
+<pre><code>*   这几天live2d那块碰到了一个很蛋疼的bug：物理有问题。。简单来讲就是人物的衣袖之类的会突然来回抖动。。
+    找了一天多了，终于发现，原来是物理要在animator之后执行！最后是在OnEnable里面先禁用物理，再启用就好了。
+    （不知道怎么在animator之后执行，就想了这个歪方法） 
+</code></pre>
+
+<p></p>
+
+<h4 id="1月5日-周五">1月5日，周五:</h4>
+
+<pre><code>*   技能持续开发中，目前子弹可以造成伤害了
+*   又加了个GamePool，用于存放循环使用的对象
+*   蛋疼，前几天的少枪2的版本给腾讯看了，又是有一大堆要改的。。
+</code></pre>
+
+<h4 id="1月7日-周日">1月7日，周日：</h4>
+
+<pre><code>*   技能设计有很多问题，修改中
+</code></pre>
+
+<h4 id="1月10日-周三">1月10日，周三：</h4>
+
+<pre><code>*   live2d的物理效果编辑器中跟游戏中效果不一致，这bug把我找醉了，关键是还没找到。。。
+</code></pre>
+
+<h4 id="1月14日-周日">1月14日，周日：</h4>
+
+<pre><code>*   又是打包到凌晨6点
+</code></pre>
+
+<h4 id="1月19日-周五">1月19日，周五：</h4>
+
+<pre><code>*   今天要给腾讯第二个评审版本，能不能被代理，就此一举了
+*   自己的个人项目耽搁好几天了，实在是工作太忙
+*   听闻这个版本后，可以暂时不用加班，到时就有点时间来做自己的事情了
+*   17年工资一毛未涨，很是蛋疼
+</code></pre>
+
+<h4 id="1月20日-周六">1月20日，周六</h4>
+
+<pre><code>*   昨天打包到凌晨4点。。直接在公司睡到天亮，唯一的问题是毯子比较薄，胸口有点发冷
+</code></pre>
+
+<h4 id="1月21日-周日">1月21日，周日</h4>
+
+<pre><code>*   在unity商城里面找到个EPMPolyTerrainCreator，可以用来生成简单的地形，还蛮好用的
+</code></pre>
+
+<h4 id="1月22日-周一">1月22日，周一</h4>
+
+<pre><code>*   发现如果地图数据以格子的形式保存，那么当场景很大的时候，完全没法处理。。。
+*   导航网格研究中。对寻路这块很感兴趣，准备不使用unity的，自己来生成导航网格     
+*   在github上找到这个: Hull-Delaunay-Voronoi，看看这哥们是怎么生成Delaunay三角形的
+</code></pre>
+
+<h4 id="1月25日-周四">1月25日，周四</h4>
+
+<pre><code>*   最近一直在琢磨寻路这块，很是麻烦，不太好搞
+*   这几天要给live2d做一个互动的小游戏1520，蛮有意思的
+</code></pre>
+
+<h4 id="1月26日-周五">1月26日，周五</h4>
+
+<pre><code>*   寻路还是用unity的吧。。还是抓紧时间做demo，不到自己琢磨的时候
+</code></pre>
+
+<h4 id="1月28日-周日">1月28日，周日</h4>
+
+<pre><code>*   昨天一阵痛苦，发现自己越走越远了，这也不好做，那也不好做，甚至一度准备走2D方向。幸好后面缓过来了，
+    还是用网格吧，怎么简单怎么来，navmesh以后再说。
+*   知乎上有个妹子对我的那个项目很感兴趣，表现自己比较擅长写作，还是学中医的，可以参与进来写写文案什么之类的。
+    首先一点，我非常感动，这是第一次有人主动愿意跟我一起做游戏，很难得啊！以前都是我找别人的，还被拒绝了
+    另外，她看起来跟我一样，是那种心理活动很丰富的人。我之所以这么说，是因为她每次给我发消息都是发五六条的，我给别人发消息也是这样。。
+    老实说，我就像是发现新大陆了一样
+*   接下来，我准备好好整理下我的设计，看看有什么是她能帮得上忙的  
+*   恭喜NewBee打破魔咒，3:2战胜Liquid取得ESLONE冠军！！！
+*   找了张demo图片，以后游戏制作陷入迷茫的时候，就把这张图片拿出来看下
+</code></pre></div></article>
+					
+						
+
+	
+
+
+		
+			
+		
+
+		
+			
+		
+
+		
+			
+		
+
+		
+
+	
+	
+		
+  	
+  	
+
+
+					
+					
+					
+
+
+				    </div>
+				</div>
+			</div>
+			<footer id="footer" class="inner">Copyright &copy; 2018
+
+    多摩雄
+
+
+
+
+<script src="https://constly.github.io//js/slash.js"></script>
+<script src="https://constly.github.io//js/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script></footer>
+		</div>
+	</div>
+	
+</body>
+</html>
